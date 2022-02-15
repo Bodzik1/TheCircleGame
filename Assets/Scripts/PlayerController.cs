@@ -1,13 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
 
+    public GameObject gameOver;
+
     public float _force = 230f;
 
     private Rigidbody2D rb;
+
+    public int health = 1;
 
     // Start is called before the first frame update
     void Awake()
@@ -21,6 +26,13 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
 
+        if(health <= 0)
+        {
+            gameOver.SetActive(true);
+            Time.timeScale = 0f;
+            Destroy(gameObject);
+        }
+
         if (Input.GetMouseButtonDown(0))
         {
             Flap();
@@ -32,21 +44,6 @@ public class PlayerController : MonoBehaviour
     {
 
         rb.AddForce(Vector2.up * _force);
-
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-
-        if (other.CompareTag("Obstacle"))
-        {
-
-            UnityEngine.SceneManagement.SceneManager.LoadScene(
-                UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
-
-            FindObjectOfType<GameManager>().Play("PlayerDeath");
-
-        }
 
     }
 
