@@ -9,11 +9,6 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 
-    public TextMeshProUGUI scoreText;
-    
-    public float scoreAmount;
-    public float pointIncreasedPerSecond;
-
     public Sound[] sounds;
 
     public static GameManager instance;
@@ -44,15 +39,12 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        scoreAmount = 0f;
-        pointIncreasedPerSecond = 21f;
         Play("Theme");
     }
 
     void Update()
     {
-        scoreText.text = (int)scoreAmount + " Score";
-        scoreAmount += pointIncreasedPerSecond * Time.deltaTime;
+        
     }
 
     public void Play (string name)

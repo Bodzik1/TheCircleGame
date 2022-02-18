@@ -6,6 +6,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
+    [SerializeField] private SkinManager skinManager;
+
     public GameObject gameOver;
 
     public float _force = 230f;
@@ -20,6 +22,11 @@ public class PlayerController : MonoBehaviour
 
         rb = GetComponent<Rigidbody2D>();
 
+    }
+
+    private void Start()
+    {
+        GetComponent<SpriteRenderer>().sprite = skinManager.GetSelectedSkin().sprite;
     }
 
     // Update is called once per frame

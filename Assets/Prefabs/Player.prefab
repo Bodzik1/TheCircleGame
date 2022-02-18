@@ -168,4 +168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76af7970ac7e5574ebd7953fa0d8f70d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skinManager: {fileID: 11400000, guid: 8d35e77207ede5c4da3e0f7352d149bd, type: 2}
+  gameOver: {fileID: 0}
   _force: 230
+  health: 1

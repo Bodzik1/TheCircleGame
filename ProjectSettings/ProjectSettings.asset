@@ -837,7 +837,7 @@ PlayerSettings:
     Legacy Analytics: 0
     Purchasing: 0
     UDP: 0
-    Unity Ads: 0
+    Unity Ads: 1
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -851,10 +851,10 @@ PlayerSettings:
     m_VersionName: 
   apiCompatibilityLevel: 6
   activeInputHandler: 0
-  cloudProjectId: d7726906-9ff2-46cd-8977-d02d92f58d33
+  cloudProjectId: ab6b2dde-e48a-4af1-8676-58bfc7da7c16
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: The circle game
+  projectName: The circle game (1)
   organizationId: unity_tyd4rhnipyjatg
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
